@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpErrorInterceptor } from './http-error.interceptor';
 
 
 import { BrowseBeersPageComponent } from './components/browse-beers-page/browse-beers-page.component';
@@ -12,17 +14,12 @@ import { FavoriteBeersPageComponent } from './components/favorite-beers-page/fav
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BeerListComponent } from './components/beer-list/beer-list.component';
 import { BeerCardComponent } from './components/beer-card/beer-card.component';
+import { BeerModalComponent } from './components/beer-modal/beer-modal.component';
 
-import { MatToolbarModule} from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
 
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzListModule } from 'ng-zorro-antd/list';
@@ -33,11 +30,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { HeartOutline } from '@ant-design/icons-angular/icons';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { BeerModalComponent } from './components/beer-modal/beer-modal.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { HttpErrorInterceptor } from './http-error.interceptor';
 
 const icons = [ HeartOutline ];
 
@@ -58,11 +53,6 @@ registerLocaleData(en);
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatGridListModule,
-    MatCardModule,
     FormsModule,
     NzCardModule,
     NzListModule,
