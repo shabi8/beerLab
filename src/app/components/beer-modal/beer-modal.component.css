@@ -1,0 +1,16 @@
+::ng-deep nz-modal-container{
+    max-height: 90vh;
+}
+
+/* .modal-content {
+    display: block;
+    justify-content: center;
+} */
+
+.modal-description {
+    margin-top: 10px;
+}
+
+img {
+    width: 5vw;
+}

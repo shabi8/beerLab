@@ -1,0 +1,9 @@
+
+nz-page-header {
+    background-color: #e6d9a9;
+}
+
+nz-page-header-title {
+    cursor: pointer;
+    padding-left: 10px;
+}

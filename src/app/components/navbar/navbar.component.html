@@ -1,0 +1,22 @@
+<nz-page-header [nzGhost]="true">
+    <nz-page-header-title routerLink="/">Beer Lab</nz-page-header-title>
+    <nz-page-header-title routerLink="/favorites">Favorite Beer</nz-page-header-title>
+
+    <nz-page-header-extra *ngIf="this.currentRoute === '/'">
+        <nz-space>
+            <nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+                <input type="text" [(ngModel)]="searchText" nz-input placeholder="Enter food to pair your beer" />
+              </nz-input-group>
+              <ng-template #suffixButton>
+                <button nz-button nzType="primary" nzSize="large" nzSearch (click)="findPairedBeers()">Pair Beer</button>
+            </ng-template>
+        </nz-space>
+    </nz-page-header-extra>
+
+    <nz-page-header-extra *ngIf="this.currentRoute === '/favorites' && favoriteList">
+        <nz-space>
+            <button nz-button nzType="primary" nzSize="large" nzSearch (click)="clearAllFavorites()">Clear all Favorites</button>
+        </nz-space>
+    </nz-page-header-extra>
+
+</nz-page-header>

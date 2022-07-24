@@ -1,0 +1,15 @@
+<nz-layout>
+    <nz-content>
+            <div class="browse-beers-content">
+                <app-beer-list [beers$]="beers$"></app-beer-list>
+                <app-beer-modal></app-beer-modal>
+            </div>   
+    </nz-content>
+</nz-layout>
+<nz-footer>
+    <div nz-row nzJustify="center">
+        <nz-pagination [nzPageIndex]="1" [nzTotal]="100" (nzPageIndexChange)="getPageBeeers($event)"></nz-pagination>
+    </div>
+    
+</nz-footer>
+
